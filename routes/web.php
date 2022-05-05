@@ -15,8 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
-Route::get('/me', function () {
-    return auth()->user();
-})->middleware('cas.auth');
+Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'dashboard'])
+    ->middleware('cas.auth')
+    ->name('dashboard');
+
+
