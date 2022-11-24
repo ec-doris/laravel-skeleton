@@ -179,5 +179,13 @@ return [
     |--------------------------------------------------------------------------
     | The extra query parameter to specify the service type
      */
-    'cas_service_type'      => env('CAS_SERVICE_TYPE', 'serviceValidate')
+    'cas_service_type'      => env('CAS_SERVICE_TYPE', 'serviceValidate'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Client service: host, port, protocol.
+    |--------------------------------------------------------------------------
+    | Example: 'http://localhost', 'https://example.com:8888'
+    */
+    'cas_client_service' => env('CAS_CLIENT_SERVICE', 'http://localhost'),
 ];
